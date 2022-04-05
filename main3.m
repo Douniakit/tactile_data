@@ -84,15 +84,42 @@
 %  figure,plot(f12_ic)
 
 
-plotForces(f12_ic)
+%plotForces(f12_ic)
+
+load f11_ic.mat
+load f12_ic.mat 
+load f3B_ic.mat
+load f5_ic.mat
+load f8_ic.mat
+
+load f12_sc.mat
+load f1A_sc.mat
+load f3B_sc.mat
+load f4A_sc.mat
+load f8_sc.mat
+
+fn_11_ic=getForcesNorms(f11_ic); 
+
+fn_12_ic=getForcesNorms(f12_ic);
+
+fn_3B_ic=getForcesNorms(f3B_ic);
+
+fn_5_ic=getForcesNorms(f5_ic);
+
+fn_8_ic=getForcesNorms(f8_ic);
+
+fn_12_sc=getForcesNorms(f12_sc);
+
+fn_1A_sc=getForcesNorms(f1A_sc);
+
+fn_3B_sc=getForcesNorms(f3B_sc);
+
+fn_4A_sc=getForcesNorms(f4A_sc);
+
+fn_8_sc=getForcesNorms(f8_sc);
 
 
-
-
-
-
-
-
+clear f11_ic f12_ic f3B_ic f5_ic f8_ic f12_sc f1A_sc f3B_sc f4A_sc f8_sc
 
 
 
