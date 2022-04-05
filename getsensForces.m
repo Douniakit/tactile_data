@@ -1,5 +1,6 @@
 function F=getsensForces(Data,ID)
 
+%% this function retrieves the forces for one sensors from data using it's identifier
 % ID is the sensor ID 
 
 

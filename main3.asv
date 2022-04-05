@@ -1,0 +1,60 @@
+clear all
+close all
+clc
+
+
+
+%% using data from data harvester
+
+fileID = fopen('data2/nc_0.txt','r');
+my_data0=fscanf(fileID,'%f',[368*3+1 inf]);
+fclose(fileID);
+
+my_data0=my_data0';
+% max0=max(my_data0);
+%my_data(:,1)=my_data(:,1)-my_data(1,1); %% wrong time !
+
+%% using data from data harvester
+
+fileID = fopen('data2/nc_1.txt','r');
+my_data1=fscanf(fileID,'%f',[368*3+1 inf]);
+fclose(fileID);
+
+my_data1=my_data1';
+%my_data(:,1)=my_data(:,1)-my_data(1,1); %% wrong time !
+
+%% using data from data harvester
+
+fileID = fopen('data2/nc_2.txt','r');
+my_data2=fscanf(fileID,'%f',[368*3+1 inf]);
+fclose(fileID);
+
+my_data2=my_data2';
+%my_data(:,1)=my_data(:,1)-my_data(1,1); %% wrong time !
+
+
+my_data=[my_data0; my_data1; my_data2];
+max_d=max(my_data);
+min_d=min(my_data);
+
+
+%% filtering
+% -------------------------------------------------------------------------
+
+[n m]=size(my_data);
+dat_f_nc=my_data;
+for i=1:n
+   
+    for j=2:m
+        if (dat_f_nc(i,j)<=max_d(j)) && (dat_f_nc(i,j)>=min_d(j))
+        dat_f_nc(i,j)=0;        
+        end
+              
+    end
+end
+    
+
+
+facc=getFilteredDat(my_data,min_d,max_d);
+
+save('thresholds.mat','min_d','max_d')

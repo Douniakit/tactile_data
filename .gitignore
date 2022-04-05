@@ -18,3 +18,9 @@ data2/
 tactile_cal9.50922e\+06.txt
 
 *.txt
+
+fxyz_sensors/
+
+data_nc.mat
+
+thresholds.mat
