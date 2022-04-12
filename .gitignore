@@ -24,3 +24,7 @@ fxyz_sensors/
 data_nc.mat
 
 thresholds.mat
+
+*.mat
+
+dat_classif/
