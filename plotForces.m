@@ -1,7 +1,7 @@
 function plotForces(Fxyz)
 [~,k]=size(Fxyz);
 F=[];
-figure,
+%figure,
 for idx=1:(k/3) 
         Fx=Fxyz(:,(idx-1)*3+1);
         Fy=Fxyz(:,(idx-1)*3+2);

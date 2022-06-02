@@ -2,6 +2,7 @@ function F=getsensForces(Data,ID)
 
 %% this function retrieves the forces for one sensors from data using it's identifier
 % ID is the sensor ID 
+% Data [ T  Fxi Fyi Zzi]
 
 
 % THUMB_MASK {/*tip 0*/ 1, 2, 3, 4, 5, 6, 7, 8, 9, 18, 19, 20, 21, 22, 23, 32, 33, 34, 35, 36, 37, 46, 47, 48, 49, 50, 59, 60, 61, 62,
@@ -79,7 +80,8 @@ F=[];
 for i=1:length(idx)
          
         F=[F Data(:,(idx(i)-1)*3+2:(idx(i)-1)*3+4)];
+        %idx(i)
 end
 
-
+idx
 end 

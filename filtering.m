@@ -23,8 +23,6 @@ mm=preprocess1(f6_nc)
 figure, plot(f6_nc,'b'), hold on, plot (mm,'r')
 
 
-
-
 fx6_sc=D_sc(:,(i-1)*3+1);
 fy6_sc=D_sc(:,(i-1)*3+2);
 fz6_sc=D_sc(:,(i-1)*3+3);
